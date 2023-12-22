@@ -33,3 +33,7 @@ app.post('/api/username', (req, res) => {
   console.log('Received username:', req.body.userData.username);
   res.json({ message: 'Username received on the server' });
 });
+
+app.listen(3001, () => {
+  console.log("Server running");
+});
