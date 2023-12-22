@@ -17,6 +17,10 @@ app.use(cors(
     }
 ));
 
+app.get("/",(req,res)=>{
+    res.json("Hello");
+})
+
 app.post('/add', async (req, res) => {
 
     const database = client.db("mydb2");
