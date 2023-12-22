@@ -9,7 +9,13 @@ const app = express();
 
 app.use(bodyParser.json());
 
-app.use(cors());
+app.use(cors(
+    {
+        origin:["https://finalfk-frontend.vercel.app/"],
+        methods:["POST","GET"],
+        credentials:true
+    }
+));
 
 app.post('/add', async (req, res) => {
 
@@ -26,9 +32,4 @@ app.post('/add', async (req, res) => {
 app.post('/api/username', (req, res) => {
   console.log('Received username:', req.body.userData.username);
   res.json({ message: 'Username received on the server' });
-});
-
-const PORT = 5000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
 });
