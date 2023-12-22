@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 
 app.use(cors(
     {
-        origin:["https://finalfk-frontend.vercel.app/"],
+        origin:["https://finalfk-frontend.vercel.app"],
         methods:["POST","GET"],
         credentials:true
     }
