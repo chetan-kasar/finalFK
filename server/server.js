@@ -18,7 +18,7 @@ app.use(cors(
 ));
 
 app.get("/",(req,res)=>{
-    res.json("Hello");
+    res.end("Hello");
 })
 
 app.post('/add', async (req, res) => {
