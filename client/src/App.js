@@ -12,7 +12,7 @@ const YourComponent = () => {
     e.preventDefault();
 
     try {
-      let response = await axios.post('http://localhost:5000/add', {userData});
+      let response = await axios.post('finalfk-api.vercel.app/add', {userData});
     } catch (error) {
         console.error('Error sending username:', error);
       }
