@@ -4,8 +4,7 @@ import axios from 'axios';
 const YourComponent = () => {
   const [username, setUsername] = useState('');
   const userData = {
-    username:"Rohit Sir",
-    age:85
+    username:"Suresh raina",
   }
 
   const handleSubmit = async (e) => {
