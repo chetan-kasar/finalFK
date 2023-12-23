@@ -12,7 +12,7 @@ const YourComponent = () => {
     e.preventDefault();
 
     try {
-      let response = await axios.post('https://vercel-server-weld.vercel.app/add', {userData});
+      let response = await axios.post('https://vercel-server-snowy.vercel.app/add', {userData});
     } catch (error) {
         console.error('Error sending username:', error);
       }
