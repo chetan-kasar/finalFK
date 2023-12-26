@@ -7,7 +7,7 @@ const YourComponent = () => {
     username:"Suresh raina",
   }
 
-  const imageSelected = (event)=>{
+  const imageSelected = async (event)=>{
       const formData = new FormData();
       formData.append('titleImage', event.target.files[0]);
 
