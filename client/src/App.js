@@ -7,20 +7,21 @@ const YourComponent = () => {
     username:"Suresh raina",
   }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const imageSelected = (event)=>{
+      const formData = new FormData();
+      formData.append('titleImage', event.target.files[0]);
 
-    try {
-      let response = await axios.post('https://vercel-server-snowy.vercel.app/add', {userData});
-    } catch (error) {
-        console.error('Error sending username:', error);
-      }
-  }
+        try {
+          let response = await axios.post('https://travel-server-sooty.vercel.app/upload', formData,{headers: {"Content-Type": "multipart/form-data"}});
+        } catch (error) {
+            console.error('Error sending username:', error);
+          }
+    }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <button type="submit">Send Username</button>
-    </form>
+    <div>
+      <input type="file" id="imageUpload" name="image" accept="image/*" onChange={imageSelected}></input>
+    </div>
   );
 };
 
